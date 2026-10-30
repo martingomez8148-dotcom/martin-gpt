@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="MARTIN GPT - Tu asistente de inteligencia artificial">
+  <title>MARTIN GPT</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/icon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">M</div>
+      <div>
+        <h1>MARTIN GPT</h1>
+        <p>Tu asistente inteligente</p>
+      </div>
+    </div>
+    <span class="status">● En línea</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome" id="welcome">
+      <h2>¡Hola! Soy MARTIN GPT</h2>
+      <p>¿En qué puedo ayudarte hoy?</p>
+      <div class="suggestions">
+        <button onclick="suggest('Explícame un tema paso a paso')">📚 Aprender algo</button>
+        <button onclick="suggest('Ayúdame a crear una aplicación')">💻 Crear una aplicación</button>
+        <button onclick="suggest('Dame ideas creativas para un proyecto')">💡 Ideas creativas</button>
+      </div>
+    </section>
+
+    <section id="chat" class="chat"></section>
+
+    <form id="chatForm" class="composer">
+      <textarea id="message" placeholder="Escribí tu mensaje..." rows="1" required></textarea>
+      <button id="send" type="submit">➤</button>
+    </form>
+    <p class="notice">MARTIN GPT puede cometer errores. Verificá la información importante.</p>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
