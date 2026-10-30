@@ -80,3 +80,9 @@ input.addEventListener("keydown", (event) => {
     form.requestSubmit();
   }
 });
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .catch(error => console.error("Error al activar la instalación:", error));
+  });
+    }
